@@ -1,0 +1,18 @@
+--CREATE TRIGGER trReadOnly_tblEvents ON TBROLES
+--    INSTEAD OF INSERT,
+--               UPDATE,
+--               DELETE
+--AS
+--BEGIN
+--    RAISERROR( 'TBROLES table is read only.', 16, 1 )
+--    ROLLBACK TRANSACTION
+--END
+--CREATE TRIGGER trReadOnly_tblTBCONTROLS ON  TBCONTROLS 
+--    INSTEAD OF  
+                 
+--               DELETE
+--AS
+--BEGIN
+--    RAISERROR( 'TBCONTROLS table is read only.', 16, 1 )
+--    ROLLBACK TRANSACTION
+--END

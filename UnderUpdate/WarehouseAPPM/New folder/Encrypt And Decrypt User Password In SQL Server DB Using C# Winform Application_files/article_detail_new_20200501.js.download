@@ -1,0 +1,1333 @@
+﻿var _timer = 0;
+var followAuthorTimer = 0;
+var isBusy = false;
+var mainTutorialContainer = "";
+var tutorialPopupWrapper = "";
+var isBookmarkProcessRunning = false;
+var isMobileDevice = false;
+var isFeaturedProcessRunning = false;
+var isRequestCompled = true;
+var loaderHtml = "<span class='loader-container'><img class='loader-image' src='/images/csharp/ajax-loader-small.gif' alt='Loading...' title='Loading...'></span>";
+var currentRelatedBookSlider = "next";
+
+document.addEventListener('DOMContentLoaded', function () {
+    deferArticle();
+
+});
+function deferArticle() {
+    if (window.jQuery) {
+        deferArticleDetail();
+    }
+    else {
+        setTimeout(function () { deferArticle() }, 100);
+    }
+}
+
+function deferArticleDetail() {
+
+    AppendScriptFiles(); 
+    adjustShareIconsPositions(true);
+
+
+    /*Load User Controls*/
+    setTimeout(function () {
+        GetAboutAuthorNew();
+    }, 500);
+
+    jQuery("#AuthorProfileLinkForName").mouseenter(function () {
+        if (jQuery("#hddIsFollowing").length > 0){
+           bindAuthorFolllowPopupData();
+        }
+    });
+
+    jQuery("#AuthorProfileLinkForName").mouseleave(function () {
+        if (jQuery("#hddIsFollowing").length > 0) {
+            removeAuthorFollowPopupData();
+        }
+    });
+
+    jQuery(document).click(function () {
+        jQuery('.follow-popup-top').remove();
+    });
+
+    /* To Make Tutorial*/
+    jQuery("#btnMarkTutorial").click(function () {
+        articleMarkAsTutorial();
+    });
+
+    /* --- To Delete Article --- */
+    jQuery('#ImageButtonDelete[data-type]').click(function () {
+        // this function loadConfirmationStyles() is defined at login js file
+        loadConfirmationStyles();
+        var element = jQuery(this).parent();
+
+        jQuery.confirm({
+            'title': 'Delete Confirmation',
+            'message': 'Do you really want to delete this artice?',
+            'buttons': {
+                'Okay': {
+                    'action': function () {
+                        var articleId = jQuery('#hddArticleID').val();
+                        deleteArticle(articleId, element);
+                    }
+                },
+                'Cancel': {
+                    'action': function () { return false; }
+                }
+            }
+        });
+    });
+
+    //Display FollowAuthor Popup on Scroll & document ready.
+    jQuery(window).scroll(function () {
+        if (jQuery("#FollowPopup #btnFollowAuthor").length > 0) {
+            ManageFollowPopup();
+        }
+
+        if (jQuery("#btnIconExpander a").hasClass("icon-collapse")) {
+            var positionOfLeftBar=jQuery(".HeadermenuStripBlue").outerHeight();
+            if (jQuery(".HeadermenuStripBlue").css("position") != "fixed") {
+                positionOfLeftBar+=jQuery(".HeadermenuStripBlue").offset().top;
+            }
+            else if (jQuery(".csharp-notification-bar:visible").length > 0) {
+                positionOfLeftBar += jQuery(".csharp-notification-bar:visible").outerHeight();
+            }
+            jQuery(".cotent-share-icon ul").css("top", positionOfLeftBar + 5);
+        }
+        else {
+            if (jQuery(".HeadermenuStripBlue").css("position") != "fixed") {
+                jQuery(".cotent-share-icon ul").css("top", jQuery(".user-content").offset().top - getAdditionHeight());
+            }
+        }
+    });
+    
+    isMobileDevice = (jQuery(window).width() < 1206) ? true : false;
+    jQuery("#btnIconExpander a").click(function () {
+        ToggleActionIcons();
+    });
+
+
+    jQuery(window).resize(function () {
+        manageIconsOnWindowResize();
+        adjustShareIconsPositions(true);
+    });
+
+
+    /*To Record Content Activiteis: Start*/
+    jQuery('[data-download-type]').click(function (e) {
+        var contentType = jQuery(this).data("download-type");
+        var platform = "C# Corner";
+        var action = "Download";
+        var contentUrl = window.location.href;
+        RecordConetntActivity(action, contentUrl, contentType, platform);
+    });
+
+    jQuery(".icon-facebook-2,.icon-twitter-2,.icon-linkedIn-2,.icon-googlePlus-2,.icon-googleplus-2,.icon-reddit,.icon-whatsapp,.icon-print").click(function () {
+        var contentType = (jQuery("ul[data-content-type]").length > 0) ? jQuery("ul[data-content-type]").data('content-type') : "Unknown";
+        var contentUrl = window.location.href;
+        var action = "Share";
+        var platform = (jQuery(this).hasClass('icon-facebook-2') ? "Facebook" : (jQuery(this).hasClass('icon-twitter-2') ? "Twitter" : (jQuery(this).hasClass('icon-linkedIn-2') ? "LinkedIn" : (jQuery(this).hasClass('icon-reddit') ? "Reddit" : (jQuery(this).hasClass('icon-googlePlus-2') ? "Google Plus" : (jQuery(this).hasClass('icon-whatsapp') ? "WhatsApp" : (jQuery(this).hasClass('icon-googleplus') ? "Google Plus" : "Print")))))));
+
+        if (platform.toLowerCase() == "print") {
+            action = "Print";
+            platform = "C# Corner";
+        }
+
+
+        var isForAnalytics = true;
+        if (platform == 'Facebook' || platform == 'Twitter' || platform == 'LinkedIn' || platform == 'Google Plus') {
+            if (typeof (jQuery(this).data('track')) == 'undefined') {
+                isForAnalytics = false;
+            }
+        }
+        if (isForAnalytics) {
+            RecordConetntActivity(action, contentUrl, contentType, platform);
+        }
+    });
+    /*To Record Content Activiteis: End*/
+
+    
+}
+/*--DOM Ready ends here*/
+
+// It's used at social share icons
+function popupwindowAtCenter(url, title, w, h) {
+    var left = (screen.width / 2) - (w / 2);
+    var top = (screen.height / 2) - (h / 2);
+    return window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, copyhistory=no, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
+}
+
+function reactByEmotion(emotion_type_id, _emotion) {
+    jQuery.ajax({
+        url: "/Handlers/CsharpCommon.ashx?method=react_content&type=Article&emotion_type_id=" + emotion_type_id,
+        data: { article_id: jQuery('#hddArticleID').val() },
+        type: "POST",
+        success: function (response) {
+            var label = jQuery('#LabelLikeCount');
+            var bottomLabel = jQuery("#BottomEmotionsContainer span#LabelLikeCount");
+            if (response == "login") {
+                if (jQuery('#hiddenFieldReturnUrl').val() != undefined && jQuery('#hiddenFieldReturnUrl').val() != '') {
+
+                    window.location = jQuery('#hiddenFieldReturnUrl').val();
+                }
+                else {
+                    window.location = '/login'
+                };
+            }
+            var result = JSON.parse(response);
+            if (parseInt(result[0]) == 1) {
+                label.text(parseInt(label.text()) + 1);
+                bottomLabel.text(parseInt(bottomLabel.text()) + 1);
+
+                jQuery("#TopStatsContainer a#btnLikeAnchor").removeAttr("class").addClass("d-icon icon-28 undo-" + _emotion + " like-button");
+                jQuery("#BottomEmotionsContainer a#btnLikeAnchor").removeAttr("class").addClass("d-icon icon-28 undo-" + _emotion + " like-button");
+                if (typeof jQuery("#AnchorEmotionPopup").attr("onclick") === "undefined") {
+                    jQuery("#AnchorEmotionPopup").attr("onclick", "getContentReactions('" + jQuery("#hddArticleID").val() + "','article');");
+                }
+                if (emotion_type_id == 8) {
+                    generateReasonBox(jQuery('#hddArticleID').val(), 'article');
+                }
+            }
+            else if (parseInt(result[0]) == -1) {
+                label.text(parseInt(label.text()) - 1);
+                bottomLabel.text(parseInt(bottomLabel.text()) - 1);
+                jQuery("#TopStatsContainer a#btnLikeAnchor").removeAttr("class").addClass("d-icon icon-28 icon-like like-button");
+                jQuery("#BottomEmotionsContainer a#btnLikeAnchor").removeAttr("class").addClass("d-icon icon-28 icon-like like-button");
+
+                if (parseInt(label.text()) === 0) {
+                    jQuery("#AnchorEmotionPopup").removeAttr("onclick");
+                }
+            }
+            else if (parseInt(result[0]) == 2) {
+                jQuery("#BottomEmotionsContainer a#btnLikeAnchor").removeAttr("class").addClass("d-icon icon-28 undo-" + _emotion + " like-button");
+                jQuery("#TopStatsContainer a#btnLikeAnchor").removeAttr("class").addClass("d-icon icon-28 undo-" + _emotion + " like-button");
+                if (emotion_type_id == 8) {
+                    generateReasonBox(jQuery('#hddArticleID').val(), 'article');
+                }
+            }
+            else {
+                label.css('color', 'red');
+            }
+        }
+    });
+}
+
+function GetAboutAuthorNew() {
+    var authorId = jQuery('#HiddenAuthorId').val();
+    var rawUrl = jQuery('#hddRawUrl').val();
+
+    jQuery.ajax({
+        type: "POST",
+        url: "/WebServices/CommonServices.asmx/GetAuthorBio",
+        data: "{'AuthorId':'" + authorId + "','ReturnUrl':'" + rawUrl + "'}",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: function (r) {
+            if (r.d.length > 0) {
+                jQuery('#AboutAuthorBox').append(r.d);
+            }
+        }
+    });
+}
+
+function DeleteArticleExtention(extentionId) {
+    if (confirm('Are you sure to delete?')) {
+        jQuery.ajax({
+            url: "/WebServices/CommonServices.asmx/DeleteExtention",
+            data: "{'ExtentionId':'" + extentionId + "'}",
+            type: "POST",
+            async: true,
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            beforeSend: function () {
+                jQuery('#imgLoadingExtention').removeClass('hide');
+            },
+            success: function (data) {
+                if (data.d == 'login') {
+                    var logingCheckUrl = jQuery('#HiddenLoginCheckReturnUrl').val();
+                    window.location = logingCheckUrl;
+                }
+                else {
+                    if (data.d == 'True') {
+                        jQuery('li[data-extention="' + extentionId + '"]').remove();
+                    }
+                }
+            },
+            complete: function () {
+                jQuery('#imgLoadingExtention').addClass('hide');
+            }
+        });
+    }
+}
+
+function AddToArticleBookmark(element) {
+    var parentElement = jQuery('#' + element.id).parent();
+    var article_id = jQuery('#hddArticleID').val();
+    var message = "";
+    if (isBookmarkProcessRunning) {
+        return false;
+    }
+
+    jQuery.ajax({
+        url: "/WebServices/CommonServices.asmx/AddToBookmark",
+        data: "{ContentId: '" + article_id + "',ContentType:'articles'}",
+        type: "POST",
+        contentType: 'application/json; charset=utf-8',
+        dataType: 'json',
+        beforeSend: function () {
+            toggleLoaderImage(parentElement, false);
+            isBookmarkProcessRunning = true;
+        },
+        success: function (response) {
+            if (response.d === 'login') {
+                window.location = jQuery('#hiddenFieldReturnUrl').val();
+            }
+            else {
+                if (parseInt(response.d) == 0) {
+                    message = "This article is successfully saved in your bookmarks!";
+                    jQuery("#ImageButtonAddToMyBookmarks").attr("onclick", "return RemoveFromArticleBookmark(this);")
+                        .prop("title", "Remove from bookmark")
+                        .removeClass("icon-bookmark-add")
+                        .addClass("icon-bookmark-delete");
+                }
+                else if (parseInt(response.d) == 1) {
+                    message = "Please try again";
+                }
+                else if (parseInt(response.d) == 2) {
+                    message = "This article is already saved in your bookmarks!";
+                    jQuery("#ImageButtonAddToMyBookmarks").attr("onclick", "return RemoveFromArticleBookmark(this);")
+                        .prop("title", "Remove from bookmark")
+                        .removeClass("icon-bookmark-add")
+                        .addClass("icon-bookmark-delete");
+                }
+                else if (parseInt(response.d) == 3) {
+                    message = "You cannot bookmark a deleted article!";
+                }
+                clearTimeout(_timer);
+                jQuery(".toasterShow").removeClass("showThread");
+                jQuery("#toasterSpanMessage").text(message);
+                jQuery(".toasterShow").addClass("showThread");
+                _timer = setTimeout(function () {
+                    jQuery(".toasterShow").removeClass("showThread");
+                }, 5000);
+            }
+        },
+        complete: function () {
+            toggleLoaderImage(parentElement, true);
+            isBookmarkProcessRunning = false;
+        }
+    });
+    return false;
+}
+
+function RemoveFromArticleBookmark(element) {
+    var parentElement = jQuery('#' + element.id).parent();
+    var article_id = jQuery('#hddArticleID').val();
+    var message = "";
+    if (isBookmarkProcessRunning) {
+        return false;
+    }
+    jQuery.ajax({
+        url: "/WebServices/CommonServices.asmx/RemoveFromBookmark",
+        data: "{id: '" + article_id + "',type:'articles'}",
+        type: "POST",
+        contentType: 'application/json; charset=utf-8',
+        dataType: 'json',
+        beforeSend: function () {
+            toggleLoaderImage(parentElement, false);
+            isBookmarkProcessRunning = true;
+        },
+        success: function (response) {
+            if (parseInt(response.d) == 0) {
+                message = "This article is successfully removed from your bookmarks!";
+                jQuery("#ImageButtonAddToMyBookmarks").attr("onclick", "return AddToArticleBookmark(this);")
+                    .prop("title", "Bookmark this article")
+                    .removeClass("icon-bookmark-delete")
+                    .addClass("icon-bookmark-add");
+            }
+            else {
+                message = "Please try again";
+            }
+
+            clearTimeout(_timer);
+            jQuery(".toasterShow").removeClass("showThread");
+            jQuery("#toasterSpanMessage").text(message);
+            jQuery(".toasterShow").addClass("showThread");
+            _timer = setTimeout(function () {
+                jQuery(".toasterShow").removeClass("showThread");
+            }, 5000);
+        },
+        complete: function () {
+            toggleLoaderImage(parentElement, true);
+            isBookmarkProcessRunning = false;
+        }
+    });
+    return false;
+}
+
+//To Make Featured/Unfeatured
+function MarkAsFeaturedArticle(element) {
+    var parentElement = jQuery('#' + element.id).parent();
+    var article_id = jQuery('#hddArticleID').val();
+    var message = "";
+    if (isFeaturedProcessRunning) {
+        return false;
+    }
+    jQuery.ajax({
+        url: "/WebServices/CommonServices.asmx/MarkAsFeaturedArticle",
+        data: "{articleId: '" + article_id + "'}",
+        type: "POST",
+        contentType: 'application/json; charset=utf-8',
+        dataType: 'json',
+        beforeSend: function () {
+            toggleLoaderImage(parentElement, false);
+            isFeaturedProcessRunning = true;
+        },
+        success: function (response) {
+
+            if (response.d === 'login') {
+                window.location = jQuery('#hiddenFieldReturnUrl').val();
+            }
+            else {
+                var classFeatured = 'icon-featured';
+                var classMakeFeatured = 'icon-make-featured';
+                var tooltipText = '';
+
+                if (parseInt(response.d) == 0) {
+                    tooltipText = "Make this article featured";
+                    message = "Article is set as unfeatured";
+                    jQuery('#FeaturedSpan').hide();
+                    jQuery('#ImageButtonFeaturedArticle').removeClass(classFeatured).addClass(classMakeFeatured).attr('title', tooltipText);
+                }
+                else if (parseInt(response.d) == 1) {
+                    tooltipText = "Make this article unfeatured";
+                    message = "Article is set as featured";
+                    jQuery('#FeaturedSpan').show();
+                    jQuery('#ImageButtonFeaturedArticle').removeClass(classMakeFeatured).addClass(classFeatured).attr('title', tooltipText);
+                }
+                else if (parseInt(response.d) == 2) {
+                    message = "There is some problem occurred while processing your request";
+                }
+                //Show message in toaster
+                clearTimeout(_timer);
+                jQuery(".toasterShow").removeClass("showThread");
+                jQuery("#toasterSpanMessage").text(message);
+                jQuery(".toasterShow").addClass("showThread");
+                _timer = setTimeout(function () {
+                    jQuery(".toasterShow").removeClass("showThread");
+                }, 5000);
+
+            }
+        },
+        complete: function () {
+            toggleLoaderImage(parentElement, true);
+            isFeaturedProcessRunning = false;
+        }
+    });
+    return false;
+}
+
+//Cloning article 
+function cloneArticle(articleId) {
+    jQuery.ajax({
+        url: "/WebServices/CommonServices.asmx/CloneArticle",
+        data: "{_articleId: '" + articleId + "'}",
+        type: "POST",
+        contentType: 'application/json',
+        dataType: 'json',
+        success: function (response) {
+            if (response.d != null || respone.d) {
+                window.location.href = response.d;
+            }
+            else {
+                jQuery("#LabelMessageBox").html("Error occured, try again");
+                jQuery("#LabelMessageBox").show();
+            }
+        }
+    });
+}
+
+//Deleting article 
+function deleteArticle(articleId, element) {
+    var obj = "{_articleId: '" + articleId + "', ContentType:'"+"article"+"'}";
+    jQuery.ajax({
+        url: "/WebServices/CommonServices.asmx/DeleteArticle",
+        data: obj,
+        type: "POST",
+        contentType: 'application/json',
+        dataType: 'json',
+        beforeSend: function () {
+            toggleLoaderImage(element, false);
+            isBusy = true;
+        },
+        success: function (response) {
+            if (response.d != null || respone.d) {
+                window.location.href = response.d;
+            }
+            else {
+                jQuery("#LabelMessageBox").html("Error occured, try again");
+                jQuery("#LabelMessageBox").show();
+            }
+        },
+        complete: function () {
+            isBusy = false;
+            toggleLoaderImage(element, true);
+        },
+        error: function (err) {
+            console.log(err);
+        }
+    });
+}
+//Download Article Files 
+function downloadFile(downloadId, obj) {
+    var fileName = jQuery(obj).html();
+    jQuery.ajax({
+        url: "/WebServices/CommonServices.asmx/DownloadFile",
+        data: "{DownloadId: '" + downloadId + "',FileName:'" + fileName + "'}",
+        type: "POST",
+        contentType: 'application/json',
+        dataType: 'json',
+        success: function (response) {
+            if (response.d != null || respone.d) {
+                window.location.href = response.d;
+            }
+            else {
+                jQuery("#LabelMessageBox").html("Error occured, try again");
+                jQuery("#LabelMessageBox").show();
+            }
+        },
+        error: function (err) {
+            console.log(err);
+        }
+    });
+    return false;
+}
+
+/*C# Search  End*/
+function followAuthor(isFromTop) {
+    if (isBusy) {
+        return true;
+    }
+    var author_id = jQuery('#hiddenAuthorInfo').attr('data-author-id');
+
+    var contentType = (jQuery("ul[data-content-type]").length > 0) ? jQuery("ul[data-content-type]").data('content-type') : "article";
+
+    jQuery.ajax({
+        url: "/Handlers/CsharpCommon.ashx?method=author_follow_unfollow",
+        data: {
+            authorId: author_id
+        },
+        type: "POST",
+        beforeSend: function () {
+            isBusy = true;
+            jQuery('.author-social').first().parent().append("<span class='author-social-loader'><img src='/images/csharp/ajax-loader-small.gif' /></span>");
+        },
+        success: function (response) {
+            if (response == "login") {
+                var author_unique_name = jQuery('#hiddenAuthorInfo').data('unique-name');
+                window.location = "/login?ReturnUrl=" + window.location.href + "&authorFollow=true-" + author_id + "-" + contentType.toLowerCase() + "&name=" + author_unique_name;
+            }
+            else {
+                if (parseInt(response) == 1) {
+                    jQuery("#hddIsFollowing").val("true");
+                    jQuery(".btn-follow").html("Following").attr("onclick", "return false;").attr("disabled", "disabled");
+                    var totalFollowers = parseInt(jQuery("#hddTotalFollowers").val());
+                    jQuery("#hddTotalFollowers").val(totalFollowers + 1);
+                    jQuery("#totalFollowers").html(totalFollowers + 1);
+                }
+                if (!isFromTop) {
+                    jQuery('.follow-popup-top .pill-btn').html("Following").attr("title", "Following");
+                }
+                jQuery("#FollowPopup #btnFollowAuthor").html("Following").attr("title", "Following");
+            }
+        },
+        complete: function () {
+            isBusy = false;
+            jQuery('.author-social-loader').remove();
+        },
+    });
+    return false;
+}
+
+function ManageFollowPopup() {
+    var tittlePrefix = jQuery('#hiddenAuthorInfo').attr('data-popup-title');
+    var contentType = (jQuery("ul[data-content-type]").length > 0) ? jQuery("ul[data-content-type]").attr('data-content-type') : "article";
+    jQuery('#FollowPopupTitle').text(tittlePrefix + ' ' + contentType.toLowerCase());
+
+    var $PopupContainer = jQuery('#FollowPopup');
+    var totalDisplacementFromTop = jQuery(window).scrollTop() + jQuery(window).height();
+    var windowWidth = parseInt(jQuery(window).width());
+
+    if ($PopupContainer.hasClass('hide')) {
+        if (totalDisplacementFromTop >= jQuery('.author-bio-content #AuthorName').offset().top) {
+            $PopupContainer.animate({ right: 8, opacity: 1 }, 300);
+            $PopupContainer.removeClass('hide');
+        }
+    }
+    else {
+        if (!$PopupContainer.hasClass('hide')) {
+            if (totalDisplacementFromTop <= jQuery('.author-bio-content #AuthorName').offset().top) {
+                $PopupContainer.animate({ right: -100, opacity: 0 }, 250, function () {
+                    $PopupContainer.addClass('hide');
+                    if (jQuery("#FollowPopup #btnFollowAuthor").text().trim().toLowerCase() == "following") {
+                        $PopupContainer.remove();
+                    }
+                });
+            }
+        }
+    }
+}
+
+function closeFollowPopup() {
+    jQuery('#FollowPopup').fadeOut(300, function () {
+        jQuery('#FollowPopup').remove();
+    });
+    return false;
+}
+
+function generateEditorialFeedbackPopup(content_id, content_type) {
+    var editorialFeedbackPopup = jQuery("<div id='FeedbackPopup' class='modal fade' role='dialog' tabindex='-1'>\
+                                <div class='modal-dialog'>\
+                                    <div class='modal-content'>\
+                                    <div class='modal-header'>\
+                                        <button type='button' id='btnFeedbackPopupClose' class='close' title='Close' data-dismiss='modal'>&times;</button>\
+                                        <h3 class='modal-title text-center h3'>Editorial Feedback</h3>\
+                                    </div>\
+                                    <div class='modal-body' >\
+                                         <label id='lblMessage' style='display:block'></label>\
+                                        <textarea id='txtEditorFeedback' style='width:100%; height:90px;' class='form-control'></textarea>\
+                                    </div>\
+                                    <div class='modal-footer'><img src='/images/csharp/ajax-loader-small.gif' class='tutorial-loader hide'>\
+                                        <button type='button' id='btnSubmitFeedback' class='btn btn-primary' title='submit'>Submit</button>\
+                                        <button type='button' class='btn btn-primary' data-dismiss='modal' title='Cancel'>Cancel</button>\
+                                    </div>\
+                                    </div>\
+                                </div>\
+                                </div>");
+
+    jQuery("body").append(editorialFeedbackPopup);
+    //Bind Click Event
+    jQuery('#btnSubmitFeedback').on("click", function () {
+        InsertEditorialFeedback();
+    });
+
+    jQuery(editorialFeedbackPopup).modal('show');
+    jQuery("#btnFeedbackPopupClose").click(function () {
+        jQuery("#FeedbackPopup").modal("hide").remove();
+    });
+}
+
+function InsertEditorialFeedback() {
+    var _contentId = jQuery('#hddArticleID').val();
+    var _contentType = jQuery('#HiddenContentType').val().toLowerCase();
+    var _contentTypeId = (_contentType == 'article') ? 1 : 4;
+    var _feedbackText = jQuery('#txtEditorFeedback').val().trim();
+    var _contentTitle = jQuery('#txtEditorFeedback').val().trim();
+    var _contentUrl = jQuery('#HiddenRawUrl').val().trim();
+
+    if (_feedbackText.trim() != "") {
+        jQuery.ajax({
+            type: "POST",
+            url: "/WebServices/CommonServices.asmx/EditorialFeedbacckInsert",
+            data: "{'contentId':'" + _contentId + "', 'feedbackText':'" + _feedbackText + "','contentTypeId':" + _contentTypeId + ",'contentType':'" + _contentType + "'}",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            beforeSend: function () {
+                jQuery('.tutorial-loader').removeClass('hide');
+                isBusy = true;
+            },
+            success: function (response) {
+                var data = response.d;
+                if (data != null) {
+                    data = JSON.parse(data);
+                    if (data == "login") {
+                        window.location.href = '/login?ReturnUrl=' + window.location.href;
+                    }
+                    else {
+                        data = parseInt(data[0].Status);
+                        if (data == 1) {
+                            jQuery('#lblMessage').text('Feedback submitted successfully').css({ "color": "#008000", "padding-left": "10px" });
+                            jQuery('#txtEditorFeedback,#btnSubmitFeedback').remove();
+                        }
+                        else if (data == 0) {
+                            jQuery('#lblMessage').text('Please try again').css({ "color": "e62112", "padding-left": "10px" });
+                        }
+                    }
+                }
+            },
+            complete: function () {
+                jQuery('.tutorial-loader').addClass('hide');
+                isBusy = false;
+            }
+        });
+    }
+    else {
+        jQuery('#lblMessage').text('Please enter feedback').css("color", "#e62112");
+    }
+}
+
+jQuery("li#IconExpander a").click(function () {
+    var currentButton = jQuery(this);
+    var isDevice = false;
+    var iconsContainerWidth = jQuery(".cotent-share-icon").width();
+    if (parseInt(iconsContainerWidth) > 50) {
+        isDevice = true;
+    }
+    if (currentButton.hasClass('icon-expand')) {
+        jQuery(currentButton).removeClass('icon-expand').addClass('icon-collapse');
+        jQuery(currentButton).attr("title", "Collapse");
+        jQuery('#InnerIconContainer').removeClass('hide');
+
+        var iconsCount = jQuery("#InnerIconContainer ul li a:not('.hide')").length;
+        var innerIconContainerHeight = (iconsCount * 41);
+
+        if (!isDevice) {
+            jQuery("#InnerIconContainer").css("width", "44px");
+            jQuery("#InnerIconContainer").animate({
+                height: innerIconContainerHeight,
+                opacity: 1.0
+            }, 1500);
+        }
+        else {
+            var invisibleIconInDevice = jQuery("#InnerIconContainer ul li.hidden-lg-down:not('.hide')").length;
+            iconsCount = iconsCount - invisibleIconInDevice;
+            var innerIconContainerWidth = (iconsCount * 41);
+            jQuery("#InnerIconContainer").css("height", "45px");
+            jQuery("#InnerIconContainer").animate({
+                width: innerIconContainerWidth,
+                opacity: 1.0
+            }, 1500);
+        }
+    }
+    else {
+        jQuery(currentButton).addClass('icon-expand').removeClass('icon-collapse');
+        jQuery(currentButton).attr("title", "Expand");
+
+        if (!isDevice) {
+            jQuery("#InnerIconContainer").animate({
+                height: "1px",
+                opacity: 0
+            }, 1500);
+        }
+        else {
+            jQuery("#InnerIconContainer").animate({
+                width: "1px",
+                opacity: 0
+            }, 1500);
+        }
+    }
+});
+
+
+function bindAuthorFolllowPopupData() {
+    var isLoginAuthorContent = 'false';
+
+    if (jQuery("#hddIsLoginAuthorContent").length > 0) {
+        isLoginAuthorContent = (jQuery("#hddIsLoginAuthorContent").val());
+    }
+
+    if (isLoginAuthorContent.toLowerCase() == "true") { return; }
+
+    var divPopover = document.createElement("div");
+    divPopover.setAttribute("class", "follow-popup with-caret-top follow-popup-top");
+
+    jQuery(divPopover).mouseenter(function () {
+        clearTimeout(followAuthorTimer);
+    });
+
+    jQuery(divPopover).mouseleave(function () {
+        removeAuthorFollowPopupData();
+    });
+    jQuery(divPopover).click(function (e) {
+        e.stopPropagation();
+    });
+    //Media Start
+    var divMedia = document.createElement("div");
+    divMedia.setAttribute("class", "media");
+    divPopover.appendChild(divMedia);
+    //Media Left Start
+    var divMediaLeft = document.createElement("div");
+    divMediaLeft.setAttribute("class", "media-left media-top");
+    var anchorAuthorImage = document.createElement("a");
+    anchorAuthorImage.href = jQuery('#AuthorLinkForName').attr('href');
+    anchorAuthorImage.title = "Go to the profile of " + jQuery('#AuthorProfileLinkForName').html().trim();
+    var authorImage = document.createElement("img");
+    authorImage.setAttribute("class", "user-image-64");
+    authorImage.src = jQuery("#ImgAuthor")[0].src;
+    anchorAuthorImage.appendChild(authorImage);
+    divMediaLeft.appendChild(anchorAuthorImage);
+    //Media Left End
+
+    //Media Body Start
+    var divMediaBody = document.createElement("div");
+    divMediaBody.setAttribute("class", "media-body");
+
+    var authorAuthorName = document.createElement("a");
+    authorAuthorName.href = jQuery('#AuthorProfileLinkForName').attr('href');
+    authorAuthorName.title = "Go to the profile of " + jQuery('#AuthorProfileLinkForName').html().trim();
+    authorAuthorName.innerHTML = jQuery('#AuthorProfileLinkForName').html();
+    authorAuthorName.setAttribute("class", "author");
+    divMediaBody.appendChild(authorAuthorName);
+
+    //author twitter handle
+    var userTwitterHandle = jQuery("#hiddenAuthorInfo").attr('data-twitter-handle');
+    if (typeof (userTwitterHandle) !== "undefined" && userTwitterHandle !== null && userTwitterHandle!=="") {
+        var paraTwitterHandle = document.createElement("p");
+        paraTwitterHandle.setAttribute("class", "author-twitter");
+        var twitterHandler = document.createElement("a");
+        twitterHandler.href = jQuery("#hiddenAuthorInfo").data('twitter-url')
+        twitterHandler.innerHTML = "@" + userTwitterHandle;
+        paraTwitterHandle.appendChild(twitterHandler)
+        divMediaBody.appendChild(paraTwitterHandle);
+    }
+
+    //Reputations Stats
+    var _rank = jQuery('#hiddenAuthorInfo').attr('data-rank');
+    var _reputation = jQuery('#hiddenAuthorInfo').attr('data-reputation');
+    var _readCount = jQuery('#hiddenAuthorInfo').attr('data-readcount');
+    var _isInternal = jQuery('#hiddenAuthorInfo').attr('data-internal');
+
+    var divAuthorStats = document.createElement('div');
+    divAuthorStats.setAttribute("class", "rpv-wrapper");
+
+    var iTagRank = document.createElement('i');
+    iTagRank.setAttribute("class", "d-icon icon-author-r");
+    var spanRank = document.createElement('span');
+    spanRank.innerHTML = _rank;
+    if (_isInternal == "0") {
+        spanRank.setAttribute("title", "Overall Rank");
+    }
+
+    var iTagReputation = document.createElement('i');
+    iTagReputation.setAttribute("class", "d-icon icon-author-p");
+    var spanReputation = document.createElement('span');
+    spanReputation.innerHTML = _reputation;
+    spanReputation.setAttribute("title", "Reputation");
+
+    var iTagTotalViews = document.createElement('i');
+    iTagTotalViews.setAttribute("class", "d-icon icon-author-v");
+    var spanToralViews = document.createElement('span');
+    spanToralViews.innerHTML = _readCount;
+    spanToralViews.setAttribute("title", "Total Views");
+
+    divAuthorStats.appendChild(iTagRank);
+    divAuthorStats.appendChild(spanRank);
+
+    divAuthorStats.appendChild(iTagReputation);
+    divAuthorStats.appendChild(spanReputation);
+
+    divAuthorStats.appendChild(iTagTotalViews);
+    divAuthorStats.appendChild(spanToralViews);
+
+    divMediaBody.appendChild(divAuthorStats);
+
+    //Media Body Ends
+    divMedia.appendChild(divMediaLeft);
+    divMedia.appendChild(divMediaBody);
+
+    //Media Ends
+
+    //Para Author Bio Starts
+    var paraAuthorBio = document.createElement("p");
+    paraAuthorBio.setAttribute("class", "author-info");
+    paraAuthorBio.innerHTML = jQuery('#AuthorBio').html();
+    if (jQuery("#AuthorBio").text().length > 0) {
+        var description = jQuery("#AuthorBio").html().trim();
+        if (description != null) {
+            description = description.split("... Read more")[0];
+            description = (description.length > 110) ? description.split("... Read more")[0].substring(0, 110) + "..." : description;
+        }
+        paraAuthorBio.innerHTML = description;
+    }
+    divPopover.appendChild(paraAuthorBio);
+
+    //Bottom Stats
+    var divBottomStats = document.createElement("div");
+    divBottomStats.setAttribute("class", "media popup-footer");
+    var div1 = document.createElement("div");
+    div1.setAttribute("class", "media-body media-middle");
+    //Followers Count
+    var spanFollowers = document.createElement("span");
+    spanFollowers.setAttribute("class", "author-social");
+    spanFollowers.innerHTML = "Following&nbsp;&nbsp;<b>" + jQuery("#hddTotalFollowing").val(); +"</b>";
+    //Following Count
+    var spanFollowing = document.createElement("span");
+    spanFollowing.setAttribute("class", "author-social");
+    spanFollowing.innerHTML = "Followers&nbsp;&nbsp;<b>" + jQuery("#hddTotalFollowers").val(); +"</b>";
+
+    div1.appendChild(spanFollowers);
+    div1.appendChild(spanFollowing);
+
+    var div2 = document.createElement("div");
+    div2.setAttribute("class", "media-right");
+    //Creating Button For Folllow and Following
+    var btnFollow = document.createElement("button");
+    if (jQuery("#hddIsFollowing").val().toLowerCase() === "false") {
+            btnFollow.setAttribute("class", "pill-btn");
+            btnFollow.innerHTML = "<span class='follow-sign'>+</span>Follow";
+            var authorId = jQuery('#HiddenAuthorId').val();
+            btnFollow.setAttribute("onclick", "return followAuthor(false);");
+            btnFollow.setAttribute("title", "Follow");
+    }
+    else {
+            btnFollow.setAttribute("class", "pill-btn");
+            btnFollow.innerHTML = "Following";
+            btnFollow.setAttribute("onclick", "return false;");
+            btnFollow.setAttribute("title", "Following");
+    }
+    div2.appendChild(btnFollow);
+    divBottomStats.appendChild(div1);
+    divBottomStats.appendChild(div2);
+
+
+    divPopover.appendChild(divMedia);
+    divPopover.appendChild(paraAuthorBio);
+    divPopover.appendChild(divBottomStats);
+
+    jQuery("#AuthorProfileLinkForName").parent().append(divPopover);
+
+    if (jQuery('.follow-popup-top').length > 0) {
+        clearTimeout(followAuthorTimer);
+        return;
+    }
+
+}
+
+function removeAuthorFollowPopupData() {
+    followAuthorTimer = setTimeout(function () {
+        jQuery('.follow-popup-top').fadeOut(300, function () {
+            jQuery('.follow-popup-top').remove();
+        })
+    }, 2000);
+
+}
+
+
+
+
+function makeTutorial() {
+    if (isBusy) {
+        return true;
+    }
+    var path = window.location.pathname;
+    var seriesId = jQuery("#ddlSeries").val();
+    var isVideo = false;
+    var isBlog = false;
+    var title = escape(jQuery("h1#ContentTitle").html());
+    var keywords = [].slice.call(document.querySelectorAll("ul#ArticleTagKeywords>li>a")).map(x => escape(x.innerHTML)).join(",");
+    var _AuthorId = jQuery("#HiddenAuthorId").val();
+    var _ContentId = jQuery("#hddArticleID").val();
+    var $lableMessage = jQuery("#tutorialPopupWrapper #lblMessage");
+
+    jQuery.ajax({
+        url: '/WebServices/TutorialService.asmx/MarkAsTutorial',
+        type: "POST",
+        dataType: 'json',
+        contentType: "application/json; charset=utf-8",
+        data: "{'Title':'" + title + "','Description':'','Path':'" + path + "','SeriesId':" + seriesId + ",'IsVideo':" + isVideo + ",'IsBlog':" + isBlog + ",'Keywords':'" + keywords + "','BlogImageDirectory':'','AuthorId':'" + _AuthorId + "','ContentId':'" + _ContentId + "'}",
+        beforeSend: function () {
+            jQuery('.tutorial-loader').removeClass('hide');
+            isBusy = true;
+        },
+        success: function (data) {
+            if(data.d==-1){
+                $lableMessage.html("This article is already available in this series.");
+            }
+            else if (data.d > 0) {
+                $lableMessage.html("Article successfully marked as tutorial.");
+            }
+            else {
+                $lableMessage.html("Error while marking article as tutorial");
+            }
+        },
+        complete: function () {
+            jQuery('.tutorial-loader').addClass('hide');
+            isBusy = false;
+        },
+        error: function (err) {
+            $lableMessage.html("Error while marking article as tutorial");
+        },
+    });
+
+}
+
+function generateTutorialPopup(contentType) {
+    var makeTutorialPopup = jQuery("<div id='tutorialPopupWrapper' class='modal fade' role='dialog' tabindex='-1'>\
+                                <div class='modal-dialog'>\
+                                    <div class='modal-content'>\
+                                    <div class='modal-header'>\
+                                        <button type='button' id='btnFeedbackPopupClose' class='close' data-dismiss='modal'>&times;</button>\
+                                        <h3 class='modal-title text-center h3'>Make "+ contentType + " As Tutorial</h3>\
+                                    </div>\
+                                    <div class='modal-body' >\
+                                        <label id='lblMessage'></label>\
+                                         <select id='ddlSeries' class='form-control'></select>\
+                                    </div>\
+                                    <div class='modal-footer'><img src='/images/csharp/ajax-loader-small.gif' class='tutorial-loader hide'>\
+                                        <button type='button' id='btnDone' class='btn btn-primary' title='submit'>Done</button>\
+                                    </div>\
+                                    </div>\
+                                </div>\
+                                </div>");
+
+    jQuery("body").append(makeTutorialPopup);
+
+    //Bind Click Event
+    jQuery('#btnDone').on("click", function () {
+        makeTutorial();
+    });
+
+    jQuery(makeTutorialPopup).modal('show');
+}
+
+
+function bindTutorialsCategories() {
+    var categoryId = jQuery("#HiddenArticleCategoryID").val();
+    jQuery.ajax({
+        type: "POST",
+        url: "/WebServices/TutorialService.asmx/GetAllSeries",
+        contentType: "application/json; charset=utf-8",
+        dataType: "JSON",
+        beforeSend: function () {
+        },
+        success: function (data) {
+            var responseData = JSON.parse(data.d);
+            var optionList = '';
+
+            for (var i = 0; i < responseData.length; i++) {
+                optionList += "<option value=" + responseData[i].SeriesID + ">" + responseData[i].Title + "</option>";
+            }
+            jQuery("#tutorialPopupWrapper #ddlSeries").html(optionList);
+        },
+        error: function (err) {
+
+        },
+        complete: function () {
+
+        }
+    });
+}
+
+function articleMarkAsTutorial() {
+    generateTutorialPopup('Article');
+    bindTutorialsCategories();
+}
+
+//To append script file references at the bottom of the page
+function AppendScriptFiles() {
+
+    setTimeout(function () {
+        if (jQuery('#ActionsIconsContainer #ImageButtonDelete').length > 0) {
+            //To append script file reference inot DOM if Delete Button is Visible
+            (function (d, t) {
+                var g = d.createElement(t),
+                    count = d.getElementsByTagName(t),
+                    s = d.getElementsByTagName(t)[count.length - 1];
+                g.src = '/JavaScripts/AlertPopup/AlertPopup_20161226.js';
+                s.parentNode.insertBefore(g, s);
+            }(document, 'script'));
+        }
+        
+        (function (d, t) {
+            var g = d.createElement(t),
+            count = d.getElementsByTagName(t),
+            s = d.getElementsByTagName(t)[count.length - 1];
+            g.src = '/JavaScripts/NewScripts/NewPopupPlugin.js';
+            s.parentNode.insertBefore(g, s);
+        }(document, 'script'));
+    },
+    3000);
+
+    //To Print Contnet Page
+    setTimeout(function(){
+        (function (d, t) {
+            var g = d.createElement(t),
+                count = d.getElementsByTagName(t),
+                s = d.getElementsByTagName(t)[count.length - 1];
+            g.src = '/JavaScripts/NewScripts/new_print_content_20191129.js';
+            s.parentNode.insertBefore(g, s);
+        }(document, 'script'));
+    }, 300);
+}
+
+function ToggleActionIcons() {
+    var currentButton = jQuery("#btnIconExpander a");
+    if (currentButton.hasClass('icon-expand')) {
+        jQuery(currentButton).removeClass('icon-expand').addClass('icon-collapse').attr("title", "Collapse");
+
+        var innerIconContainerHeight = 0;
+        var visibleIconCount = jQuery("#InnerIconContainer ul li:not('.hide') a").length;
+
+        if (!isMobileDevice) {
+            innerIconContainerHeight = (visibleIconCount * 40);
+            jQuery("#InnerIconContainer ul").css("width", "40px");
+            var MoveTopPosition = jQuery(".HeadermenuStripBlue").outerHeight(); 
+            if(jQuery(".HeadermenuStripBlue").css("position")!="fixed"){
+                MoveTopPosition+=jQuery(".HeadermenuStripBlue").offset().top;
+            }
+            else if (jQuery(".csharp-notification-bar:visible").length > 0) {
+                MoveTopPosition += jQuery(".csharp-notification-bar:visible").outerHeight();
+            }
+            jQuery(".cotent-share-icon ul").animate({
+                top: MoveTopPosition+5,
+            },{duration:1500,queue:false});
+            jQuery("#InnerIconContainer ul").animate({
+                height: innerIconContainerHeight,
+                opacity: 1.0
+            },{duration:1500,queue:false});
+        }
+        else {
+
+            var invisibleIconCountInMobile = jQuery("#InnerIconContainer ul li.hidden-tablet:not('.hide') a").length;
+            var iconsCount = visibleIconCount - invisibleIconCountInMobile;
+            var innerIconContainerWidth = (iconsCount * 40);
+
+            jQuery("#InnerIconContainer ul").css("height", "40px");
+            jQuery("#InnerIconContainer ul").animate({
+                width: innerIconContainerWidth,
+                opacity: 1.0
+            }, 1500);
+        }
+    }
+    else {
+        jQuery(currentButton).addClass('icon-expand').removeClass('icon-collapse').attr("title", "Expand");
+
+        if (!isMobileDevice) {
+
+            jQuery(".cotent-share-icon ul").animate({
+                top: jQuery(".user-content").offset().top - getAdditionHeight(),
+            }, { duration: 1500, queue: false });
+            jQuery("#InnerIconContainer ul").animate({
+                height: "1px",
+                opacity: 0
+            }, { duration: 1500, queue: false });
+        }
+        else {
+            jQuery("#InnerIconContainer ul").animate({
+                width: "1px",
+                opacity: 0
+            }, 1500);
+        }
+    }
+}
+
+function manageIconsOnWindowResize() {
+    var windowWidth = jQuery(window).width();
+    if (parseInt(windowWidth) < 1206 && !isMobileDevice) {
+        isMobileDevice = true;
+        jQuery("#InnerIconContainer ul").css({ "width": "0px", "height": "0px" });
+        if (jQuery("li#btnIconExpander a").hasClass('icon-collapse')) {
+            jQuery("li#btnIconExpander a").removeClass('icon-collapse').addClass("icon-expand");
+        }
+    }
+    else if (parseInt(windowWidth) >= 1206 && isMobileDevice) {
+        isMobileDevice = false;
+        jQuery("#InnerIconContainer ul").css({ "width": "0px", "height": "0px" });
+        if (jQuery("li#btnIconExpander a").hasClass('icon-collapse')) {
+            jQuery("li#btnIconExpander a").removeClass('icon-collapse').addClass("icon-expand");
+        }
+
+    }
+}
+
+function toggleLoaderImage(parentElemement, isVisible) {
+    if (!isVisible) {
+        parentElemement.append(loaderHtml);
+    }
+    else {
+        if (jQuery('.loader-container').length > 0) {
+            jQuery('.loader-container').remove();
+        }
+    }
+}
+
+/*To Record/Insert Content Activities for Analytics*/
+function RecordConetntActivity(acction, contentUrl, contentType, platform) {
+    if (isRequestCompled) {
+        jQuery.ajax({
+            url: "/Handlers/ContentActivity.ashx",
+            data: {
+                Action: acction, ContentType: contentType, Url: contentUrl, Platform: platform
+            },
+            type: "POST",
+            async: false,
+            beforeSend: function () {
+                isRequestCompled = false;
+            },
+            success: function (response) {
+                if (response != null) {
+                    var result = JSON.parse(response);
+                    if (parseInt(result.RemainingLimit) == 0) {
+                        var toasterHTML = "<div id='divShareLimitToaster' class='toasterShow showThread' style='top:34px;right:10px;z-index:9999999;'><span style='z-index:9999999;background:#dd4134;opacity:0;'>You have exceeded daily sharing limit.</span></div>";
+                        (jQuery("#divShareLimitToaster").length > 0) ? jQuery("#divShareLimitToaster").remove() : "";
+                        jQuery('body').prepend(toasterHTML);
+                        var _toasterHeight = jQuery("#divShareLimitToaster span").outerHeight();
+                        jQuery("#divShareLimitToaster span").animate({ opacity: 1, height: _toasterHeight }, 400);
+
+                        clearTimeout(_timer);
+                        _timer = setTimeout(function () {jQuery("#divShareLimitToaster").remove();}, 5000);
+                    }
+                }
+            },
+            complete: function () {
+                isRequestCompled = true;
+            }
+        });
+    }
+}
+
+/* For Top 8 Ebooks Randomly*/
+function moveLeft(){
+    jQuery(".sliderBox li").each(function () {
+        jQuery(jQuery(".sliderBox li")[4]).css("margin-left", "8px")
+        jQuery(this).animate({ left: jQuery(this).css("left").replace("px", "") - 568 }, {
+            duration: 1000, queue: true, complete: function () {
+                jQuery(jQuery(".sliderBox li")[3]).css("margin-left", "-40px")
+            }
+        });
+    });
+}
+function moveRight() {
+    jQuery(".sliderBox li").each(function () {
+        jQuery(jQuery(".sliderBox li")[3]).css("margin-left", "")
+        jQuery(this).animate({ left: Number(jQuery(this).css("left").replace("px", "")) + 568 }, {
+            duration: 1000, queue: true, complete: function () {
+                jQuery(jQuery(".sliderBox li")[4]).css("margin-left", "")
+            }
+        });
+    });
+}
+
+function bindPrevNextClickEvent(){
+    jQuery("#prev,#next").click(function () {
+        if (currentRelatedBookSlider == "prev") {
+            moveRight();
+            currentRelatedBookSlider = "next";
+        }
+        else if (currentRelatedBookSlider == "next") {
+            moveLeft();
+            currentRelatedBookSlider = "prev";
+        }
+    });
+}
+
+//Load eBooks Asynchronouly
+setTimeout(function () {
+    jQuery.ajax({
+        type: "POST",
+        url: "/WebServices/CommonServices.asmx/UserControlLoadAsync",
+        data: "{ 'controlVirtualPath': '~/Controls/NewControls/Ebook/RelatedEbooks.ascx' }",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        async: true,
+        success: function (responseHtml) {
+            if (jQuery("#OurEbooks").length > 0) {
+                jQuery("#OurEbooks").html(responseHtml.d);
+                bindPrevNextClickEvent();
+                //Defer Image Binding 
+                setTimeout(function () { eBookDeferImageBinding(); }, 0)
+            }
+        }
+    });
+}, 2000);
+
+
+function eBookDeferImageBinding() {
+    var elements = jQuery('.slider li img');
+    jQuery.each(elements, function (i) {
+        var img = elements[i];
+        img.src = img.dataset.src;
+        img.removeAttribute('data-src');
+    });
+}
+
+/* To DeActivate The Article */
+jQuery('#ImageButtonDeactivate[data-type]').click(function () {
+    // this function loadConfirmationStyles() is defined at login js file
+    loadConfirmationStyles();
+    var element = jQuery(this).parent();
+
+    jQuery.confirm({
+        'title': 'DeActivate Confirmation',
+        'message': 'Do you really want to DeActivate this artice?',
+        'buttons': {
+            'Okay': {
+                'action': function () {
+                    var articleId = jQuery('#hddArticleID').val();
+                    deactivateArticle(articleId, element);
+                }
+            },
+            'Cancel': {
+                'action': function () { return false; }
+            }
+        }
+    });
+});
+
+//DeActivate article 
+function deactivateArticle(articleId, element) {
+    var obj = "{_articleId: '" + articleId + "', ContentType:'" + "article" + "'}";
+    jQuery.ajax({
+        url: "/WebServices/CommonServices.asmx/DeactivateArticle",
+        data: obj,
+        type: "POST",
+        contentType: 'application/json',
+        dataType: 'json',
+        beforeSend: function () {
+            toggleLoaderImage(element, false);
+            isBusy = true;
+        },
+        success: function (response) {
+            if (response.d != null || respone.d) {
+                window.location.href = response.d;
+            }
+            else {
+                jQuery("#LabelMessageBox").html("Error occured, try again");
+                jQuery("#LabelMessageBox").show();
+            }
+        },
+        complete: function () {
+            isBusy = false;
+            toggleLoaderImage(element, true);
+        },
+        error: function (err) {
+            console.log(err);
+        }
+    });
+}
+
+//To append script file references at the bottom of the page
+function AppendScriptFiles() {
+
+    setTimeout(function () {
+        if (jQuery('#ActionsIconsContainer #ImageButtonDeactivate').length > 0) {
+            //To append script file reference inot DOM if Deactivate Button is Visible
+            (function (d, t) {
+                var g = d.createElement(t),
+                    count = d.getElementsByTagName(t),
+                    s = d.getElementsByTagName(t)[count.length - 1];
+                g.src = '/JavaScripts/AlertPopup/AlertPopup_20161226.js';
+                s.parentNode.insertBefore(g, s);
+            }(document, 'script'));
+        }
+
+        (function (d, t) {
+            var g = d.createElement(t),
+                count = d.getElementsByTagName(t),
+                s = d.getElementsByTagName(t)[count.length - 1];
+            g.src = '/JavaScripts/NewScripts/NewPopupPlugin.js';
+            s.parentNode.insertBefore(g, s);
+        }(document, 'script'));
+    },
+        3000);
+    //To Print Contnet Page
+    setTimeout(function () {
+        (function (d, t) {
+            var g = d.createElement(t),
+                count = d.getElementsByTagName(t),
+                s = d.getElementsByTagName(t)[count.length - 1];
+            g.src = '/JavaScripts/NewScripts/new_print_content_20191129.js';
+            s.parentNode.insertBefore(g, s);
+        }(document, 'script'));
+    }, 300);
+}

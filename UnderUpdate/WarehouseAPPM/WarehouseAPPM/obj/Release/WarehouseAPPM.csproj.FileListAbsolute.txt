@@ -1,0 +1,384 @@
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.FRM_Expiredproducts.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.AddEmployee.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Reports.FRPALLUSers.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.ConnectDBFirst.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Expiredate.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Form1.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Form_Alert.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRMPRINTBARCODE.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.FrmRegistration.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_BackupRestore.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_DB_CON.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_ERROR.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_ExpiredateDays.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Expiredproducts.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_GetScreenName.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.FRM_login.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Reports.FRPAllCustomer.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Reports.FRPALLEmployees.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Reports.FRPALLPRODUCTS.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Reports.FRPAllQutaly.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Reports.FRPAllSupply.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Reports.FRPInvoiceSelling_Print.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Reports.FRPSupplyRepresentative.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Barcode.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.CategoryProducts.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Properties.Resources.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.CProfexpenses.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Customers.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Employee.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_MAin.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_MainUnits.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_ManagementUsers.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Prodoucts.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Quantity_Product.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Qutaly.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Qutaly_Units.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_ReturnProductOutWarehouse.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_SearchAll_InvoiceSelling.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_SearchInWarehouseBYBillNo.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_ReturnSellingBill.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Splash.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Suppliers.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_SupplyRepresentative.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Classes.SearchWareHouse.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Selling.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.comboboxtest.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_SubUnits.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_SearchAll_InvoiceStore.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Warehouse.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.invoice_Store_Status.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.testany.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRMWarehouse_invoice_Store_Status.resources
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.csproj.GenerateResource.cache
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.exe.licenses
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.csproj.CoreCompileInputs.cache
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\WarehouseAPPM.exe.config
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\WarehouseAPPM.exe
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\WarehouseAPPM.pdb
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\AxShockwaveFlashObjects.dll
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportSource.dll
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.Shared.dll
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.Windows.Forms.dll
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\Dapper.dll
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\DataGridViewUserControl.dll
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\EntityFramework.dll
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\MetroFramework.Design.dll
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\MetroFramework.dll
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\MetroFramework.Fonts.dll
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\SimpleDataGridViewPaging.dll
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\ShockwaveFlashObjects.dll
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\stdole.dll
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\Dapper.xml
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\EntityFramework.xml
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.csproj.CopyComplete
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.exe
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.pdb
+C:\Users\bishoe\Google Drive\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\bin\Debug\DBWarehouse\Warehouse.mdf
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\bin\Debug\DBWarehouse\Warehouse.mdf
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\bin\Release\DBWarehouse\Warehouse.mdf
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\WarehouseAPPM.exe.config
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\WarehouseAPPM.exe
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\WarehouseAPPM.pdb
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\AxShockwaveFlashObjects.dll
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportSource.dll
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.Shared.dll
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.Windows.Forms.dll
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\Dapper.dll
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\EntityFramework.dll
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\MetroFramework.Design.dll
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\MetroFramework.dll
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\MetroFramework.Fonts.dll
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\Microsoft.SqlServer.ConnectionInfo.dll
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\Microsoft.SqlServer.Smo.dll
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\Microsoft.SqlServer.SmoExtended.dll
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\SimpleDataGridViewPaging.dll
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\ShockwaveFlashObjects.dll
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\Microsoft.SqlServer.Management.Sdk.Sfc.dll
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\Microsoft.SqlServer.SqlEnum.dll
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\Microsoft.SqlServer.Dmf.dll
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\Microsoft.SqlServer.ServiceBrokerEnum.dll
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\Microsoft.SqlServer.RegSvrEnum.dll
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\stdole.dll
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\Dapper.xml
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\EntityFramework.xml
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.csprojAssemblyReference.cache
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.FRM_Expiredproducts.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.AddEmployee.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Reports.FRPALLUSers.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.ConnectDBFirst.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Expiredate.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Form1.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Form_Alert.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRMPRINTBARCODE.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.FrmRegistration.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_BackupRestore.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_DB_CON.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_ERROR.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_ExpiredateDays.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Expiredproducts.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_GetScreenName.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.FRM_login.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Reports.FRPAllCustomer.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Reports.FRPALLEmployees.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Reports.FRPALLPRODUCTS.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Reports.FRPAllQutaly.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Reports.FRPAllSupply.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Reports.FRPInvoiceSelling_Print.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Reports.FRPSupplyRepresentative.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Barcode.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.CategoryProducts.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Properties.Resources.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.CProfexpenses.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Customers.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Employee.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_MAin.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_MainUnits.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_ManagementUsers.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Prodoucts.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Quantity_Product.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Qutaly.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Qutaly_Units.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_ReturnProductOutWarehouse.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_SearchAll_InvoiceSelling.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_SearchInWarehouseBYBillNo.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_ReturnSellingBill.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Splash.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Suppliers.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_SupplyRepresentative.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Classes.SearchWareHouse.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Selling.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.comboboxtest.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_SubUnits.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_SearchAll_InvoiceStore.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Warehouse.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.invoice_Store_Status.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.testany.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRMWarehouse_invoice_Store_Status.resources
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.csproj.GenerateResource.cache
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.exe.licenses
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.csproj.CoreCompileInputs.cache
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.csproj.CopyComplete
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.exe
+C:\Users\bishoe\OneDrive\Warehouse\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.pdb
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\WarehouseAPPM.exe.config
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\WarehouseAPPM.exe
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\WarehouseAPPM.pdb
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\AxShockwaveFlashObjects.dll
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.CrystalReports.Engine.dll
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportSource.dll
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.Shared.dll
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.Windows.Forms.dll
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\Dapper.dll
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\EntityFramework.dll
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\MetroFramework.Design.dll
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\MetroFramework.dll
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\MetroFramework.Fonts.dll
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\Microsoft.SqlServer.ConnectionInfo.dll
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\Microsoft.SqlServer.Smo.dll
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\Microsoft.SqlServer.SmoExtended.dll
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\SimpleDataGridViewPaging.dll
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\ShockwaveFlashObjects.dll
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportAppServer.DataDefModel.dll
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportAppServer.ClientDoc.dll
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportAppServer.Controllers.dll
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportAppServer.CommLayer.dll
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportAppServer.Prompting.dll
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\Microsoft.SqlServer.Management.Sdk.Sfc.dll
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\Microsoft.SqlServer.SqlEnum.dll
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\Microsoft.SqlServer.Dmf.dll
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\Microsoft.SqlServer.ServiceBrokerEnum.dll
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\Microsoft.SqlServer.RegSvrEnum.dll
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\stdole.dll
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportAppServer.CommonControls.dll
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\Dapper.xml
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\EntityFramework.xml
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.FRM_Expiredproducts.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.AddEmployee.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Reports.FRPALLUSers.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.ConnectDBFirst.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Expiredate.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Form1.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Form_Alert.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRMPRINTBARCODE.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.FrmRegistration.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_BackupRestore.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_DB_CON.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_ERROR.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_ExpiredateDays.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Expiredproducts.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_GetScreenName.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.FRM_login.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Reports.FRPAllCustomer.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Reports.FRPALLEmployees.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Reports.FRPALLPRODUCTS.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Reports.FRPAllQutaly.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Reports.FRPAllSupply.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Reports.FRPInvoiceSelling_Print.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Reports.FRPSupplyRepresentative.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Barcode.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.CategoryProducts.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Properties.Resources.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.CProfexpenses.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Customers.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Employee.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_MAin.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_MainUnits.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_ManagementUsers.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Prodoucts.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Quantity_Product.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Qutaly.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Qutaly_Units.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_ReturnProductOutWarehouse.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_SearchAll_InvoiceSelling.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_SearchInWarehouseBYBillNo.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_ReturnSellingBill.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Splash.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Suppliers.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_SupplyRepresentative.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Classes.SearchWareHouse.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Selling.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.comboboxtest.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_SubUnits.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_SearchAll_InvoiceStore.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Warehouse.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.invoice_Store_Status.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.testany.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRMWarehouse_invoice_Store_Status.resources
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.csproj.GenerateResource.cache
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.exe.licenses
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.csproj.CoreCompileInputs.cache
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.csproj.CopyComplete
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.exe
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.pdb
+F:\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.csprojAssemblyReference.cache
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\WarehouseAPPM.exe.config
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\WarehouseAPPM.exe
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\WarehouseAPPM.pdb
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\AxShockwaveFlashObjects.dll
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportSource.dll
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.Shared.dll
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.Windows.Forms.dll
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\Dapper.dll
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\EntityFramework.dll
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\MetroFramework.Design.dll
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\MetroFramework.dll
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\MetroFramework.Fonts.dll
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\Microsoft.SqlServer.ConnectionInfo.dll
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\Microsoft.SqlServer.Smo.dll
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\Microsoft.SqlServer.SmoExtended.dll
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\SimpleDataGridViewPaging.dll
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\ShockwaveFlashObjects.dll
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\Microsoft.SqlServer.Management.Sdk.Sfc.dll
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\Microsoft.SqlServer.SqlEnum.dll
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\Microsoft.SqlServer.Dmf.dll
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\Microsoft.SqlServer.ServiceBrokerEnum.dll
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\Microsoft.SqlServer.RegSvrEnum.dll
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\stdole.dll
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\Dapper.xml
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\bin\Release\EntityFramework.xml
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.FRM_Expiredproducts.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.AddEmployee.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Reports.FRPALLUSers.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.ConnectDBFirst.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Expiredate.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Form_Alert.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRMPRINTBARCODE.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.FrmRegistration.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_BackupRestore.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_DB_CON.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_ERROR.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_ExpiredateDays.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Expiredproducts.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_GetScreenName.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.FRM_login.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Reports.FRPAllCustomer.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Reports.FRPALLEmployees.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Reports.FRPALLPRODUCTS.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Reports.FRPAllQutaly.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Reports.FRPAllSupply.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Reports.FRPInvoiceSelling_Print.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Reports.FRPSupplyRepresentative.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Barcode.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.CategoryProducts.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Properties.Resources.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.CProfexpenses.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Customers.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Employee.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_MAin.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_MainUnits.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_ManagementUsers.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Prodoucts.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Quantity_Product.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Qutaly.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Qutaly_Units.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_ReturnProductOutWarehouse.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_SearchAll_InvoiceSelling.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_SearchInWarehouseBYBillNo.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_ReturnSellingBill.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Splash.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Suppliers.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_SupplyRepresentative.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Classes.SearchWareHouse.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Selling.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.comboboxtest.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_SubUnits.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_SearchAll_InvoiceStore.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRM_Warehouse.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.invoice_Store_Status.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.testany.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FRMWarehouse_invoice_Store_Status.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.csproj.GenerateResource.cache
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.exe.licenses
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.csproj.CoreCompileInputs.cache
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.csproj.CopyComplete
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.exe
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.pdb
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FrmAbout.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.Screen.FrmReturnProducts.resources
+C:\Users\bishoe\OneDrive\UnderUpdate\New folder\UnderUpdate\WarehouseAPPM\WarehouseAPPM\obj\Release\WarehouseAPPM.csprojAssemblyReference.cache

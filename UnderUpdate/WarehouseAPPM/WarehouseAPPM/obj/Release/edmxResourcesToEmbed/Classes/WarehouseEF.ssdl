@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WarehouseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Administartion">
+    <Key>
+      <PropertyRef Name="UsersID" />
+    </Key>
+    <Property Name="UsersID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="U_Username" Type="nvarchar" MaxLength="10" />
+    <Property Name="U_Password" Type="nvarchar" MaxLength="24" />
+  </EntityType>
+  <EntityType Name="JobsName">
+    <Key>
+      <PropertyRef Name="JobID" />
+    </Key>
+    <Property Name="JobID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JobNam" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Permissions">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomersDel" Type="bit" />
+    <Property Name="EmployeesDel" Type="bit" />
+    <Property Name="SuppliersDel" Type="bit" />
+    <Property Name="SupplyRepresentativeDel" Type="bit" />
+    <Property Name="PrdouctsDel" Type="bit" />
+    <Property Name="StoreDel" Type="bit" />
+    <Property Name="BillDel" Type="bit" />
+    <Property Name="U_Username" Type="nvarchar" MaxLength="10" />
+    <Property Name="Main_Data" Type="bit" />
+    <Property Name="Managment" Type="bit" />
+    <Property Name="CustomersEdit" Type="bit" />
+    <Property Name="EmployeesEdit" Type="bit" />
+    <Property Name="SuppliersEdit" Type="bit" />
+    <Property Name="SupplyRepresentativeEdit" Type="bit" />
+    <Property Name="PrdouctsEdit" Type="bit" />
+    <Property Name="StoreEdit" Type="bit" />
+    <Property Name="BillEdit" Type="bit" />
+    <Property Name="Main_Data1" Type="bit" />
+    <Property Name="Managment1" Type="bit" />
+    <Property Name="Reports" Type="bit" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TestLoop">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="WorkPhone" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Warehouse_CategoryProduct">
+    <Key>
+      <PropertyRef Name="IdCategoryProduct" />
+    </Key>
+    <Property Name="IdCategoryProduct" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryName" Type="nvarchar" MaxLength="15" />
+    <Property Name="WDate" Type="date" />
+    <Property Name="UsersID" Type="int" />
+  </EntityType>
+  <EntityType Name="Warehouse_Employee">
+    <Key>
+      <PropertyRef Name="EmployeeId" />
+    </Key>
+    <Property Name="EmployeeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="12" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" />
+    <Property Name="Salary" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="WDate" Type="datetime" />
+    <Property Name="Notes" Type="nvarchar" MaxLength="150" />
+    <Property Name="SalaryDate" Type="datetime" />
+    <Property Name="JobID" Type="int" />
+    <Property Name="U_Username" Type="nvarchar" MaxLength="15" />
+    <Property Name="U_Password" Type="nvarchar" MaxLength="24" />
+    <Property Name="UsersID" Type="int" />
+  </EntityType>
+  <EntityType Name="Warehouse_MainUnites">
+    <Key>
+      <PropertyRef Name="UnitesNId" />
+    </Key>
+    <Property Name="UnitesNId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UName" Type="nvarchar" MaxLength="50" />
+    <Property Name="WDate" Type="datetime" />
+    <Property Name="UnitConvert" Type="int" />
+    <Property Name="UsersID" Type="int" />
+  </EntityType>
+  <EntityType Name="Warehouse_Master_Store">
+    <Key>
+      <PropertyRef Name="StoreId" />
+    </Key>
+    <Property Name="StoreId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WDate" Type="datetime" />
+    <Property Name="EmployeeId" Type="int" />
+    <Property Name="UsersID" Type="int" />
+  </EntityType>
+  <EntityType Name="Warehouse_OutLayUnites">
+    <Key>
+      <PropertyRef Name="OutLayUnID" />
+    </Key>
+    <Property Name="OutLayUnID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="QName" Type="nvarchar" MaxLength="50" />
+    <Property Name="WDate" Type="datetime" />
+    <Property Name="Notes" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="Warehouse_Points">
+    <Key>
+      <PropertyRef Name="Pointsid" />
+    </Key>
+    <Property Name="Pointsid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerId" Type="int" />
+    <Property Name="TotalPoint" Type="int" />
+    <Property Name="WDate" Type="datetime" />
+    <Property Name="Notes" Type="nvarchar" MaxLength="150" />
+    <Property Name="EmpId" Type="int" />
+  </EntityType>
+  <EntityType Name="Warehouse_QT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="STartQT" Type="int" />
+    <Property Name="IDStore" Type="int" />
+    <Property Name="CUTQT" Type="int" />
+  </EntityType>
+  <EntityType Name="Warehouse_Quantity_Product">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductID" Type="int" />
+    <Property Name="QuantityProduct" Type="int" />
+  </EntityType>
+  <EntityType Name="Warehouse_Qutaly">
+    <Key>
+      <PropertyRef Name="QutalyID" />
+    </Key>
+    <Property Name="QutalyID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OutLayUnID" Type="int" />
+    <Property Name="Amount" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="UsersID" Type="int" />
+    <Property Name="WDate" Type="datetime" />
+    <Property Name="Notes" Type="nvarchar" MaxLength="150" />
+    <Property Name="QName" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Warehouse_Selling">
+    <Key>
+      <PropertyRef Name="SellingId" />
+    </Key>
+    <Property Name="SellingId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Selling_MasterID" Type="int" Nullable="false" />
+    <Property Name="PointsId" Type="int" />
+    <Property Name="UnitesNId" Type="int" />
+    <Property Name="SUBUnitesId" Type="int" />
+    <Property Name="Notes" Type="nvarchar" MaxLength="150" />
+    <Property Name="TotalPrice" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Billno" Type="int" />
+    <Property Name="IdCategoryProduct" Type="int" />
+    <Property Name="ProdouctsId" Type="int" />
+    <Property Name="Quntity_Product" Type="int" />
+    <Property Name="UsersID" Type="int" />
+    <Property Name="Discount" Type="int" />
+    <Property Name="TotalBDiscount" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AMountDicount" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="TotalAmountRow" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="EmpId" Type="int" />
+    <Property Name="SellingPrice" Type="decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="Warehouse_Selling_Master">
+    <Key>
+      <PropertyRef Name="Selling_MasterID" />
+    </Key>
+    <Property Name="Selling_MasterID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WDate" Type="date" />
+    <Property Name="CustomerID" Type="int" />
+    <Property Name="U_Username" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Warehouse_Store">
+    <Key>
+      <PropertyRef Name="StoreId" />
+    </Key>
+    <Property Name="StoreId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SupplyRepId" Type="int" Nullable="false" />
+    <Property Name="SuppliersId" Type="int" Nullable="false" />
+    <Property Name="Billno" Type="int" />
+    <Property Name="PurchasingPrice" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="SellingPrice" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="IdCategoryProduct" Type="int" />
+    <Property Name="ProdouctsID" Type="int" />
+    <Property Name="ExpireDate" Type="datetime" />
+    <Property Name="Productiondate" Type="datetime" />
+    <Property Name="MinimumQT" Type="int" />
+    <Property Name="SizeProducts" Type="int" />
+    <Property Name="Notes" Type="nvarchar" MaxLength="150" />
+    <Property Name="TotalPrice" Type="decimal" Precision="5" Scale="2" />
+    <Property Name="Discount" Type="int" />
+    <Property Name="MStoreId" Type="int" Nullable="false" />
+    <Property Name="TotalBDiscount" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AMountDicount" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="TotalAmountRow" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="UnitesNId" Type="int" />
+    <Property Name="SUBUnitesId" Type="int" />
+    <Property Name="TotalSize" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Quntity_Product" Type="int" />
+    <Property Name="QtStartPeriod" Type="int" />
+  </EntityType>
+  <EntityType Name="Warehouse_Suppliers">
+    <Key>
+      <PropertyRef Name="SuppliersID" />
+    </Key>
+    <Property Name="SuppliersID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="12" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" />
+    <Property Name="WDate" Type="datetime" />
+    <Property Name="Notes" Type="nvarchar" MaxLength="50" />
+    <Property Name="UsersID" Type="int" />
+  </EntityType>
+  <EntityType Name="Warehouse_SupplyRepresentative">
+    <Key>
+      <PropertyRef Name="SupplyRepID" />
+    </Key>
+    <Property Name="SupplyRepID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SuppliersID" Type="int" Nullable="false" />
+    <Property Name="SRName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="11" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" />
+    <Property Name="WDate" Type="datetime" />
+    <Property Name="Notes" Type="nvarchar" MaxLength="150" />
+    <Property Name="UsersID" Type="int" />
+  </EntityType>
+  <EntityType Name="Warehouse_UnitesSub">
+    <Key>
+      <PropertyRef Name="UnitesId" />
+    </Key>
+    <Property Name="UnitesId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UnitesNId" Type="int" />
+    <Property Name="UnitConvert" Type="int" />
+    <Property Name="UnitsSubName" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Warehouse_Users">
+    <Key>
+      <PropertyRef Name="UsersID" />
+    </Key>
+    <Property Name="UsersID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="U_Username" Type="nvarchar" MaxLength="15" />
+    <Property Name="U_Password" Type="nvarchar" MaxLength="15" />
+    <Property Name="WDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="WarehouseCustomers">
+    <Key>
+      <PropertyRef Name="CustomersID" />
+    </Key>
+    <Property Name="CustomersID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="12" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" />
+    <Property Name="WDate" Type="datetime" />
+    <Property Name="Notes" Type="nvarchar" MaxLength="150" />
+    <Property Name="UsersID" Type="int" />
+  </EntityType>
+  <EntityType Name="Watehouse_BarCode">
+    <Key>
+      <PropertyRef Name="BarCodeID" />
+    </Key>
+    <Property Name="BarCodeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BarcodeCategory_Product" Type="int" />
+    <Property Name="BarCodeProduct" Type="int" />
+    <Property Name="BarCodeDate" Type="datetime" />
+    <Property Name="BarCodeText" Type="nvarchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="WatehouseProdoucts">
+    <Key>
+      <PropertyRef Name="ProdouctsID" />
+    </Key>
+    <Property Name="ProdouctsID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdCategoryProduct" Type="int" />
+    <Property Name="Pname" Type="nvarchar" MaxLength="50" />
+    <Property Name="WDate" Type="date" />
+    <Property Name="Notes" Type="nvarchar" MaxLength="150" />
+    <Property Name="UsersID" Type="int" />
+    <Property Name="BarCodeText" Type="int" />
+  </EntityType>
+  <Association Name="FK_Warehouse_BillMaster_WarehouseCustomers">
+    <End Role="WarehouseCustomers" Type="Self.WarehouseCustomers" Multiplicity="0..1" />
+    <End Role="Warehouse_Selling_Master" Type="Self.Warehouse_Selling_Master" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WarehouseCustomers">
+        <PropertyRef Name="CustomersID" />
+      </Principal>
+      <Dependent Role="Warehouse_Selling_Master">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Warehouse_Qutaly_Warehouse_OutLayUnites">
+    <End Role="Warehouse_OutLayUnites" Type="Self.Warehouse_OutLayUnites" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Warehouse_Qutaly" Type="Self.Warehouse_Qutaly" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Warehouse_OutLayUnites">
+        <PropertyRef Name="OutLayUnID" />
+      </Principal>
+      <Dependent Role="Warehouse_Qutaly">
+        <PropertyRef Name="OutLayUnID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Warehouse_Unites_Warehouse_UnitesName">
+    <End Role="Warehouse_MainUnites" Type="Self.Warehouse_MainUnites" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Warehouse_UnitesSub" Type="Self.Warehouse_UnitesSub" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Warehouse_MainUnites">
+        <PropertyRef Name="UnitesNId" />
+      </Principal>
+      <Dependent Role="Warehouse_UnitesSub">
+        <PropertyRef Name="UnitesNId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WatehouseProdoucts_Warehouse_CategoryProduct">
+    <End Role="Warehouse_CategoryProduct" Type="Self.Warehouse_CategoryProduct" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="WatehouseProdoucts" Type="Self.WatehouseProdoucts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Warehouse_CategoryProduct">
+        <PropertyRef Name="IdCategoryProduct" />
+      </Principal>
+      <Dependent Role="WatehouseProdoucts">
+        <PropertyRef Name="IdCategoryProduct" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="WarehouseModelStoreContainer">
+    <EntitySet Name="Administartion" EntityType="Self.Administartion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="JobsName" EntityType="Self.JobsName" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Permissions" EntityType="Self.Permissions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TestLoop" EntityType="Self.TestLoop" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Warehouse_CategoryProduct" EntityType="Self.Warehouse_CategoryProduct" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Warehouse_Employee" EntityType="Self.Warehouse_Employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Warehouse_MainUnites" EntityType="Self.Warehouse_MainUnites" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Warehouse_Master_Store" EntityType="Self.Warehouse_Master_Store" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Warehouse_OutLayUnites" EntityType="Self.Warehouse_OutLayUnites" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Warehouse_Points" EntityType="Self.Warehouse_Points" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Warehouse_QT" EntityType="Self.Warehouse_QT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Warehouse_Quantity_Product" EntityType="Self.Warehouse_Quantity_Product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Warehouse_Qutaly" EntityType="Self.Warehouse_Qutaly" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Warehouse_Selling" EntityType="Self.Warehouse_Selling" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Warehouse_Selling_Master" EntityType="Self.Warehouse_Selling_Master" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Warehouse_Store" EntityType="Self.Warehouse_Store" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Warehouse_Suppliers" EntityType="Self.Warehouse_Suppliers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Warehouse_SupplyRepresentative" EntityType="Self.Warehouse_SupplyRepresentative" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Warehouse_UnitesSub" EntityType="Self.Warehouse_UnitesSub" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Warehouse_Users" EntityType="Self.Warehouse_Users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WarehouseCustomers" EntityType="Self.WarehouseCustomers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Watehouse_BarCode" EntityType="Self.Watehouse_BarCode" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WatehouseProdoucts" EntityType="Self.WatehouseProdoucts" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Warehouse_BillMaster_WarehouseCustomers" Association="Self.FK_Warehouse_BillMaster_WarehouseCustomers">
+      <End Role="WarehouseCustomers" EntitySet="WarehouseCustomers" />
+      <End Role="Warehouse_Selling_Master" EntitySet="Warehouse_Selling_Master" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Warehouse_Qutaly_Warehouse_OutLayUnites" Association="Self.FK_Warehouse_Qutaly_Warehouse_OutLayUnites">
+      <End Role="Warehouse_OutLayUnites" EntitySet="Warehouse_OutLayUnites" />
+      <End Role="Warehouse_Qutaly" EntitySet="Warehouse_Qutaly" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Warehouse_Unites_Warehouse_UnitesName" Association="Self.FK_Warehouse_Unites_Warehouse_UnitesName">
+      <End Role="Warehouse_MainUnites" EntitySet="Warehouse_MainUnites" />
+      <End Role="Warehouse_UnitesSub" EntitySet="Warehouse_UnitesSub" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WatehouseProdoucts_Warehouse_CategoryProduct" Association="Self.FK_WatehouseProdoucts_Warehouse_CategoryProduct">
+      <End Role="Warehouse_CategoryProduct" EntitySet="Warehouse_CategoryProduct" />
+      <End Role="WatehouseProdoucts" EntitySet="WatehouseProdoucts" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="30bcacae3c9e4f3f82e62e5b05c29ba4" Name="Diagram1">
+        <EntityTypeShape EntityType="WarehouseModel.Administartion" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WarehouseModel.JobsName" Width="1.5" PointX="2.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WarehouseModel.Permission" Width="1.5" PointX="4.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WarehouseModel.sysdiagram" Width="1.5" PointX="6.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WarehouseModel.TestLoop" Width="1.5" PointX="8.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WarehouseModel.User" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WarehouseModel.Warehouse_CategoryProduct" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WarehouseModel.Warehouse_Employee" Width="1.5" PointX="10.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WarehouseModel.Warehouse_MainUnites" Width="2.125" PointX="5.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="WarehouseModel.Warehouse_Master_Store" Width="1.5" PointX="10.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WarehouseModel.Warehouse_OutLayUnites" Width="1.5" PointX="5.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WarehouseModel.Warehouse_Points" Width="1.5" PointX="0.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WarehouseModel.Warehouse_QT" Width="1.5" PointX="6.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WarehouseModel.Warehouse_Quantity_Product" Width="1.5" PointX="8.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WarehouseModel.Warehouse_Qutaly" Width="1.5" PointX="8" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WarehouseModel.Warehouse_Selling" Width="1.5" PointX="10.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WarehouseModel.Warehouse_Selling_Master" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WarehouseModel.Warehouse_Store" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WarehouseModel.Warehouse_Suppliers" Width="1.5" PointX="12.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WarehouseModel.Warehouse_SupplyRepresentative" Width="1.5" PointX="12.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WarehouseModel.Warehouse_UnitesSub" Width="1.5" PointX="8" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="WarehouseModel.Warehouse_Users" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WarehouseModel.WarehouseCustomer" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WarehouseModel.Watehouse_BarCode" Width="1.5" PointX="0.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WarehouseModel.WatehouseProdouct" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="WarehouseModel.FK_WatehouseProdoucts_Warehouse_CategoryProduct" ManuallyRouted="false" />
+        <AssociationConnector Association="WarehouseModel.FK_Warehouse_Unites_Warehouse_UnitesName" ManuallyRouted="false" />
+        <AssociationConnector Association="WarehouseModel.FK_Warehouse_Qutaly_Warehouse_OutLayUnites" ManuallyRouted="false" />
+        <AssociationConnector Association="WarehouseModel.FK_Warehouse_BillMaster_WarehouseCustomers" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
